@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+@font-face {
+  font-family: 'Steampunk';
+  src: url('/font/SteampunkDemoByMartaVanEck-lwEe.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background-color: #0d0d0d;
+  color: #F5DEB3;
+  min-height: 100vh;
+}
+
+/* Steampunk scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border: 1px solid #B87333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #B5A642, #B87333);
+  border-radius: 2px;
+  border: 1px solid #CD7F32;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #D4AF37, #CD7F32);
+}
+
+/* Steampunk button styles */
+.btn-steampunk {
+  @apply relative px-6 py-3 font-steampunk text-steampunk-cream uppercase tracking-wider;
+  @apply bg-gradient-to-b from-steampunk-brass to-steampunk-copper;
+  @apply border-2 border-steampunk-gold;
+  @apply shadow-lg transition-all duration-300;
+  @apply hover:from-steampunk-gold hover:to-steampunk-brass;
+  @apply hover:shadow-steampunk-gold/50 hover:shadow-xl;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-steampunk::before {
+  content: '';
+  @apply absolute inset-0 border border-steampunk-cream/20;
+  pointer-events: none;
+}
+
+/* Gear animation */
+@keyframes rotate-gear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gear-rotate {
+  animation: rotate-gear 20s linear infinite;
+}
+
+.gear-rotate-reverse {
+  animation: rotate-gear 15s linear infinite reverse;
+}
+
+/* Logo steampunk glow animation */
+@keyframes electric-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5)) 
+            drop-shadow(0 0 10px rgba(255, 165, 0, 0.3));
+  }
+  25% {
+    filter: drop-shadow(0 0 8px rgba(255, 200, 50, 0.7)) 
+            drop-shadow(0 0 15px rgba(255, 140, 0, 0.5))
+            drop-shadow(0 0 25px rgba(212, 175, 55, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 220, 100, 0.8)) 
+            drop-shadow(0 0 20px rgba(255, 165, 0, 0.6))
+            drop-shadow(0 0 35px rgba(212, 175, 55, 0.4));
+  }
+  75% {
+    filter: drop-shadow(0 0 6px rgba(255, 180, 50, 0.6)) 
+            drop-shadow(0 0 12px rgba(255, 140, 0, 0.4));
+  }
+}
+
+@keyframes pulse-brightness {
+  0%, 100% {
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    filter: brightness(1.15) saturate(1.1);
+  }
+}
+
+.logo-glow {
+  animation: electric-glow 3s ease-in-out infinite, pulse-brightness 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.logo-glow:hover {
+  animation: none;
+  filter: drop-shadow(0 0 15px rgba(255, 220, 100, 0.9)) 
+          drop-shadow(0 0 30px rgba(255, 165, 0, 0.7))
+          drop-shadow(0 0 45px rgba(212, 175, 55, 0.5))
+          brightness(1.2) saturate(1.2);
+  transform: scale(1.05);
+}
+
+/* Section reveal animations */
+@keyframes steam-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes gear-reveal {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes slide-brass {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-copper {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pressure-gauge {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes flicker-in {
+  0%, 10%, 20% {
+    opacity: 0;
+  }
+  15%, 25% {
+    opacity: 0.5;
+  }
+  30%, 100% {
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.animate-steam-rise {
+  animation: steam-rise 0.8s ease-out both;
+}
+
+.animate-gear-reveal {
+  animation: gear-reveal 1s ease-out both;
+}
+
+.animate-slide-brass {
+  animation: slide-brass 0.7s ease-out both;
+}
+
+.animate-slide-copper {
+  animation: slide-copper 0.7s ease-out both;
+}
+
+.animate-pressure {
+  animation: pressure-gauge 0.6s ease-out both;
+}
+
+.animate-flicker {
+  animation: flicker-in 0.8s ease-out both;
+}
+
+/* Initial hidden state for animations */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+}
+
+/* Section divider */
+.section-divider {
+  @apply w-full h-px bg-gradient-to-r from-transparent via-steampunk-brass to-transparent;
+}
+
+/* Card steampunk style */
+.card-steampunk {
+  @apply relative bg-steampunk-dark/80 border-2 border-steampunk-copper;
+  @apply shadow-lg backdrop-blur-sm;
+  background-image: 
+    linear-gradient(135deg, rgba(181, 166, 66, 0.1) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(184, 115, 51, 0.1) 0%, transparent 50%);
+}
+
+.card-steampunk::before {
+  content: '';
+  @apply absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-steampunk-gold;
+}
+
+.card-steampunk::after {
+  content: '';
+  @apply absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-steampunk-gold;
+}
+
+/* Input steampunk style */
+.input-steampunk {
+  @apply w-full px-4 py-3 bg-steampunk-darker border-2 border-steampunk-copper;
+  @apply text-steampunk-cream placeholder-steampunk-cream/50;
+  @apply focus:outline-none focus:border-steampunk-gold focus:ring-1 focus:ring-steampunk-gold;
+  @apply transition-all duration-300;
+}
+
+/* Title decorations */
+.title-steampunk {
+  @apply font-steampunk text-steampunk-gold uppercase tracking-widest;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(212, 175, 55, 0.3);
+}
