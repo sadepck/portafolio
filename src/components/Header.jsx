@@ -34,10 +34,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Name - Left */}
           <div className="flex-1">
-            <h1 className="font-cinzel text-xl md:text-2xl text-steampunk-gold tracking-wider font-semibold">
+            <h1 className="font-steampunk text-xl md:text-2xl text-steampunk-gold tracking-wider font-semibold">
               Benjamin Soto Vasquez
             </h1>
-            <p className="text-xs text-steampunk-brass tracking-widest uppercase">
+            <p className="text-xs text-steampunk-brass tracking-widest uppercase font-steampunk">
               Diseñador Web Frontend
             </p>
           </div>
@@ -60,7 +60,7 @@ const Header = () => {
                 <li key={link.name}>
                   <a 
                     href={link.href}
-                    className="relative font-cinzel text-steampunk-cream hover:text-steampunk-gold 
+                    className="relative font-steampunk text-steampunk-cream hover:text-steampunk-gold 
                              uppercase tracking-wider text-sm transition-colors duration-300
                              after:content-[''] after:absolute after:bottom-0 after:left-0 
                              after:w-0 after:h-0.5 after:bg-steampunk-gold 
@@ -91,7 +91,7 @@ const Header = () => {
                   <a 
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block font-cinzel text-steampunk-cream hover:text-steampunk-gold 
+                    className="block font-steampunk text-steampunk-cream hover:text-steampunk-gold 
                              uppercase tracking-wider text-center py-2 transition-colors duration-300"
                   >
                     {link.name}

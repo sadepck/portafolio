@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Name - Left */}
           <div className="flex-1 text-center md:text-left">
-            <h3 className="font-cinzel text-xl text-steampunk-gold tracking-wider font-semibold">
+            <h3 className="font-steampunk text-xl text-steampunk-gold tracking-wider font-semibold">
               Benjamin Soto Vasquez
             </h3>
             <p className="text-xs text-steampunk-brass tracking-widest uppercase mt-1">
@@ -69,7 +69,7 @@ const Footer = () => {
           <p className="text-steampunk-brass/60 text-sm">
             © {currentYear} Benjamin Soto Vasquez. Todos los derechos reservados.
           </p>
-          <p className="text-steampunk-copper/40 text-xs mt-2 font-cinzel tracking-wider">
+          <p className="text-steampunk-copper/40 text-xs mt-2 font-steampunk tracking-wider">
             Forjado con pasión y código
           </p>
         </div>

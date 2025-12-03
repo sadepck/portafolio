@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fondo circular con gradiente -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A853"/>
+      <stop offset="50%" style="stop-color:#C9A227"/>
+      <stop offset="100%" style="stop-color:#8B6914"/>
+    </linearGradient>
+    <linearGradient id="copperGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B87333"/>
+      <stop offset="100%" style="stop-color:#8B4513"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Engranaje exterior -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#copperGradient)" stroke-width="3"/>
+  <circle cx="50" cy="50" r="35" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+  
+  <!-- Dientes del engranaje -->
+  <g fill="url(#goldGradient)">
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(0 50 50)"/>
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(45 50 50)"/>
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(90 50 50)"/>
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(135 50 50)"/>
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(180 50 50)"/>
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(225 50 50)"/>
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(270 50 50)"/>
+    <rect x="46" y="2" width="8" height="12" rx="2" transform="rotate(315 50 50)"/>
+  </g>
+  
+  <!-- Símbolo de código < / > en el centro -->
+  <text x="50" y="58" font-family="monospace" font-size="28" font-weight="bold" 
+        fill="url(#goldGradient)" text-anchor="middle">&lt;/&gt;</text>
+  
+  <!-- Círculo interior decorativo -->
+  <circle cx="50" cy="50" r="28" fill="none" stroke="url(#copperGradient)" stroke-width="1.5"/>
+  
+  <!-- Remaches decorativos -->
+  <circle cx="50" cy="18" r="3" fill="url(#goldGradient)"/>
+  <circle cx="82" cy="50" r="3" fill="url(#goldGradient)"/>
+  <circle cx="50" cy="82" r="3" fill="url(#goldGradient)"/>
+  <circle cx="18" cy="50" r="3" fill="url(#goldGradient)"/>
+</svg>

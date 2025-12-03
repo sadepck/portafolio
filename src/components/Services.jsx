@@ -14,22 +14,53 @@ const Services = () => {
     },
   ]
 
+  // Iconos SVG estilo steampunk
+  const SteampunkGear = () => (
+    <svg viewBox="0 0 100 100" className="w-12 h-12 text-steampunk-gold">
+      <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="4"/>
+      <circle cx="50" cy="50" r="8" fill="currentColor"/>
+      {[...Array(8)].map((_, i) => (
+        <rect key={i} x="46" y="15" width="8" height="15" rx="2" fill="currentColor" 
+          transform={`rotate(${i * 45} 50 50)`}/>
+      ))}
+    </svg>
+  )
+
+  const SteampunkValve = () => (
+    <svg viewBox="0 0 100 100" className="w-12 h-12 text-steampunk-gold">
+      <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="4"/>
+      <circle cx="50" cy="50" r="12" fill="none" stroke="currentColor" strokeWidth="3"/>
+      <rect x="20" y="46" width="60" height="8" rx="2" fill="currentColor"/>
+      <circle cx="50" cy="50" r="5" fill="currentColor"/>
+    </svg>
+  )
+
+  const SteampunkPiston = () => (
+    <svg viewBox="0 0 100 100" className="w-12 h-12 text-steampunk-gold">
+      <rect x="35" y="15" width="30" height="50" rx="3" fill="none" stroke="currentColor" strokeWidth="4"/>
+      <rect x="40" y="55" width="20" height="30" fill="currentColor"/>
+      <circle cx="50" cy="35" r="8" fill="currentColor"/>
+      <rect x="30" y="10" width="40" height="8" rx="2" fill="currentColor"/>
+      <rect x="42" y="80" width="16" height="10" rx="2" fill="currentColor"/>
+    </svg>
+  )
+
   const technologies = [
     {
-      name: 'HTML5',
-      icon: '🔧',
+      name: 'HTML',
+      icon: SteampunkValve,
       description: 'Estructura semántica y accesible',
       level: 90,
     },
     {
-      name: 'CSS3',
-      icon: '🎨',
+      name: 'CSS',
+      icon: SteampunkGear,
       description: 'Estilos modernos y animaciones',
       level: 85,
     },
     {
       name: 'JavaScript',
-      icon: '⚙️',
+      icon: SteampunkPiston,
       description: 'Interactividad y dinamismo',
       level: 80,
     },
@@ -46,7 +77,7 @@ const Services = () => {
           ref={titleRef}
           className={`text-center mb-16 ${titleVisible ? 'animate-steam-rise' : 'opacity-0'}`}
         >
-          <h2 className="font-cinzel text-3xl md:text-4xl mb-4 text-steampunk-gold font-bold tracking-wider">
+          <h2 className="font-steampunk text-3xl md:text-4xl mb-4 text-steampunk-gold font-bold tracking-wider">
             Servicios
           </h2>
           <div className="flex items-center justify-center gap-4">
@@ -54,7 +85,7 @@ const Services = () => {
             <Wrench className={`w-6 h-6 text-steampunk-gold ${titleVisible ? 'animate-gear-reveal' : ''}`} />
             <div className="w-16 h-px bg-steampunk-copper" />
           </div>
-          <p className="text-steampunk-cream/70 mt-4 max-w-2xl mx-auto">
+          <p className="text-steampunk-cream/70 mt-4 max-w-2xl mx-auto font-steampunk">
             Lo que puedo hacer por ti y las herramientas que domino
           </p>
         </div>
@@ -75,11 +106,11 @@ const Services = () => {
                 <service.icon className="w-10 h-10 text-steampunk-darker" />
               </div>
               
-              <h3 className="font-cinzel text-2xl md:text-3xl text-steampunk-gold mb-4 font-semibold">
+              <h3 className="font-steampunk text-2xl md:text-3xl text-steampunk-gold mb-4 font-semibold">
                 {service.title}
               </h3>
               
-              <p className="text-steampunk-cream/80 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-steampunk-cream/80 text-lg mb-8 max-w-2xl mx-auto font-steampunk">
                 {service.description}
               </p>
 
@@ -90,7 +121,7 @@ const Services = () => {
                     key={feature}
                     className="p-4 bg-steampunk-darker/50 border border-steampunk-copper/30"
                   >
-                    <span className="text-steampunk-brass font-cinzel text-sm">
+                    <span className="text-steampunk-brass font-steampunk text-sm">
                       {feature}
                     </span>
                   </div>
@@ -102,7 +133,7 @@ const Services = () => {
 
         {/* Technologies */}
         <div ref={techRef} className="max-w-5xl mx-auto">
-          <h3 className={`font-cinzel text-2xl text-steampunk-gold text-center mb-12 font-semibold ${techVisible ? 'animate-flicker' : 'opacity-0'}`}>
+          <h3 className={`font-steampunk text-2xl text-steampunk-gold text-center mb-12 font-semibold ${techVisible ? 'animate-flicker' : 'opacity-0'}`}>
             Tecnologías que Domino
           </h3>
 
@@ -114,15 +145,17 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Tech icon */}
-                <div className="text-4xl mb-4 text-center">{tech.icon}</div>
+                <div className="flex justify-center mb-4">
+                  <tech.icon />
+                </div>
                 
                 {/* Tech name */}
-                <h4 className="font-cinzel text-xl text-steampunk-gold text-center mb-2 font-semibold">
+                <h4 className="font-steampunk text-xl text-steampunk-gold text-center mb-2 font-semibold">
                   {tech.name}
                 </h4>
                 
                 {/* Description */}
-                <p className="text-steampunk-cream/70 text-sm text-center mb-6">
+                <p className="text-steampunk-cream/70 text-sm text-center mb-6 font-steampunk">
                   {tech.description}
                 </p>
 
@@ -137,7 +170,7 @@ const Services = () => {
                   <div className="absolute top-1/2 left-2 w-2 h-2 -translate-y-1/2 rounded-full bg-steampunk-brass/50" />
                   <div className="absolute top-1/2 right-2 w-2 h-2 -translate-y-1/2 rounded-full bg-steampunk-brass/50" />
                 </div>
-                <p className="text-right text-steampunk-brass text-sm mt-2 font-cinzel">
+                <p className="text-right text-steampunk-brass text-sm mt-2 font-steampunk">
                   {tech.level}%
                 </p>
               </div>

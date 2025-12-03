@@ -72,7 +72,7 @@ const Projects = () => {
           ref={titleRef}
           className={`text-center mb-16 ${titleVisible ? 'animate-steam-rise' : 'opacity-0'}`}
         >
-          <h2 className="font-cinzel text-3xl md:text-4xl mb-4 text-steampunk-gold font-bold tracking-wider">
+          <h2 className="font-steampunk text-3xl md:text-4xl mb-4 text-steampunk-gold font-bold tracking-wider">
             Mis Proyectos
           </h2>
           <div className="flex items-center justify-center gap-4">
@@ -83,7 +83,7 @@ const Projects = () => {
             </svg>
             <div className="w-16 h-px bg-steampunk-copper" />
           </div>
-          <p className="text-steampunk-cream/70 mt-4 max-w-2xl mx-auto">
+          <p className="text-steampunk-cream/70 mt-4 max-w-2xl mx-auto font-steampunk">
             Una colección de mis trabajos más destacados, cada uno creado con dedicación artesanal
           </p>
         </div>
@@ -152,11 +152,11 @@ const Projects = () => {
 
               {/* Project info */}
               <div className="p-6">
-                <h3 className="font-cinzel text-xl text-steampunk-gold mb-2 group-hover:text-steampunk-brass font-semibold 
+                <h3 className="font-steampunk text-xl text-steampunk-gold mb-2 group-hover:text-steampunk-brass font-semibold 
                              transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-steampunk-cream/70 text-sm mb-4 line-clamp-2">
+                <p className="text-steampunk-cream/70 text-sm mb-4 line-clamp-2 font-steampunk">
                   {project.description}
                 </p>
                 
@@ -166,7 +166,7 @@ const Projects = () => {
                     <span 
                       key={tag}
                       className="px-2 py-1 text-xs bg-steampunk-darker border border-steampunk-copper/50 
-                               text-steampunk-brass"
+                               text-steampunk-brass font-steampunk"
                     >
                       {tag}
                     </span>

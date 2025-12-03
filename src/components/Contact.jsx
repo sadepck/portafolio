@@ -69,7 +69,7 @@ const Contact = () => {
           ref={titleRef}
           className={`text-center mb-16 ${titleVisible ? 'animate-steam-rise' : 'opacity-0'}`}
         >
-          <h2 className="font-cinzel text-3xl md:text-4xl mb-4 text-steampunk-gold font-bold tracking-wider">
+          <h2 className="font-steampunk text-3xl md:text-4xl mb-4 text-steampunk-gold font-bold tracking-wider">
             Contáctame
           </h2>
           <div className="flex items-center justify-center gap-4">
@@ -77,7 +77,7 @@ const Contact = () => {
             <MessageSquare className={`w-6 h-6 text-steampunk-gold ${titleVisible ? 'animate-gear-reveal' : ''}`} />
             <div className="w-16 h-px bg-steampunk-copper" />
           </div>
-          <p className="text-steampunk-cream/70 mt-4 max-w-2xl mx-auto">
+          <p className="text-steampunk-cream/70 mt-4 max-w-2xl mx-auto font-steampunk">
             ¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!
           </p>
         </div>
@@ -89,7 +89,7 @@ const Contact = () => {
             className={`space-y-8 ${infoVisible ? 'animate-slide-brass' : 'opacity-0'}`}
           >
             <div className="card-steampunk p-8">
-              <h3 className="font-cinzel text-xl text-steampunk-gold mb-6 font-semibold">
+              <h3 className="font-steampunk text-xl text-steampunk-gold mb-6 font-semibold">
                 Información de Contacto
               </h3>
               
@@ -138,14 +138,14 @@ const Contact = () => {
             ref={formRef}
             className={`card-steampunk p-8 ${formVisible ? 'animate-slide-copper' : 'opacity-0'}`}
           >
-            <h3 className="font-cinzel text-xl text-steampunk-gold mb-6 font-semibold">
+            <h3 className="font-steampunk text-xl text-steampunk-gold mb-6 font-semibold">
               Envíame un Mensaje
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-steampunk-brass text-sm mb-2 font-cinzel">
+                <label htmlFor="name" className="block text-steampunk-brass text-sm mb-2 font-steampunk">
                   Nombre
                 </label>
                 <input
@@ -162,7 +162,7 @@ const Contact = () => {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-steampunk-brass text-sm mb-2 font-cinzel">
+                <label htmlFor="email" className="block text-steampunk-brass text-sm mb-2 font-steampunk">
                   Email
                 </label>
                 <input
@@ -179,7 +179,7 @@ const Contact = () => {
 
               {/* Subject */}
               <div>
-                <label htmlFor="subject" className="block text-steampunk-brass text-sm mb-2 font-cinzel">
+                <label htmlFor="subject" className="block text-steampunk-brass text-sm mb-2 font-steampunk">
                   Asunto
                 </label>
                 <input
@@ -196,7 +196,7 @@ const Contact = () => {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-steampunk-brass text-sm mb-2 font-cinzel">
+                <label htmlFor="message" className="block text-steampunk-brass text-sm mb-2 font-steampunk">
                   Mensaje
                 </label>
                 <textarea
