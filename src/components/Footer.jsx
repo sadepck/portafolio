@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Logo - Center */}
           <div className="flex-1 flex flex-col items-center">
             <img 
-              src="/logo/image_1_1764191550567.jpg" 
+              src="/logo/logo-transparent.png" 
               alt="Logo Programmer" 
               className="h-16 w-auto object-contain mb-4 logo-glow"
             />

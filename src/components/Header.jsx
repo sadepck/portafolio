@@ -46,9 +46,9 @@ const Header = () => {
           <div className="flex-1 flex justify-center">
             <a href="#" className="block">
               <img 
-                src="/logo/image_1_1764191550567.jpg" 
+                src="/logo/logo-transparent.png" 
                 alt="Logo Programmer" 
-                className="h-16 md:h-20 w-auto object-contain logo-glow hover:scale-105 transition-transform duration-300"
+                className="h-12 md:h-14 w-auto object-contain logo-glow hover:scale-105 transition-transform duration-300"
               />
             </a>
           </div>
