@@ -21,10 +21,10 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`sticky top-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-steampunk-darker/95 backdrop-blur-md shadow-lg shadow-steampunk-copper/20' 
-          : 'bg-transparent'
+          ? 'bg-[#3d4d4d]/95 backdrop-blur-md shadow-lg shadow-steampunk-copper/20' 
+          : 'bg-[#4a5a5a]/80'
       }`}
     >
       {/* Decorative top border */}

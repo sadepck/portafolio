@@ -276,3 +276,22 @@ body {
   @apply font-steampunk text-steampunk-gold uppercase tracking-widest;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(212, 175, 55, 0.3);
 }
+
+/* Screen content scrollbar */
+.screen-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.screen-content::-webkit-scrollbar-track {
+  background: rgba(45, 55, 55, 0.5);
+  border-radius: 4px;
+}
+
+.screen-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #B5A642, #8B7355);
+  border-radius: 4px;
+}
+
+.screen-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #D4AF37, #B5A642);
+}
